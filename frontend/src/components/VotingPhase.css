@@ -1,0 +1,198 @@
+.voting-phase {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.voting-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.voting-header h2 {
+  font-size: 2.5rem;
+  color: #4FC3F7;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.voting-prompt {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.voting-instruction {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+.answers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.answer-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  min-height: 120px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.answer-card:hover:not(:disabled):not(.cannot-vote) {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(79, 195, 247, 0.6);
+  box-shadow: 0 8px 24px rgba(79, 195, 247, 0.3);
+}
+
+.answer-card.selected {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.2));
+  border-color: #4CAF50;
+  box-shadow: 0 8px 24px rgba(76, 175, 80, 0.4);
+}
+
+.answer-card.cannot-vote {
+  background: rgba(255, 152, 0, 0.1);
+  border-color: rgba(255, 152, 0, 0.3);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.answer-card.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  filter: grayscale(50%);
+}
+
+.answer-card.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.answer-text {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  line-height: 1.5;
+  word-wrap: break-word;
+  font-weight: 500;
+}
+
+.my-answer-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 152, 0, 0.9);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.voted-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #4CAF50;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.waiting-message {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(76, 175, 80, 0.1);
+  border: 2px solid rgba(76, 175, 80, 0.3);
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+
+.waiting-message p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.waiting-text {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-weight: 400 !important;
+}
+
+.voted-count {
+  color: #4CAF50 !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+.btn-force {
+  width: 100%;
+  background: rgba(255, 152, 0, 0.2);
+  color: #FFA726;
+  padding: 1rem;
+  border: 2px solid rgba(255, 152, 0, 0.5);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-force:hover {
+  background: rgba(255, 152, 0, 0.3);
+  border-color: #FFA726;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 3rem;
+}
+
+@media (max-width: 768px) {
+  .voting-phase {
+    padding: 1rem;
+  }
+
+  .voting-header h2 {
+    font-size: 2rem;
+  }
+
+  .voting-prompt {
+    font-size: 1.2rem;
+  }
+
+  .answers-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .answer-card {
+    padding: 1.5rem;
+    min-height: 100px;
+  }
+
+  .answer-text {
+    font-size: 1rem;
+  }
+}

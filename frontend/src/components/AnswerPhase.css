@@ -1,0 +1,187 @@
+.answer-phase {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.prompt-card {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.prompt-category {
+  display: inline-block;
+  background: rgba(102, 126, 234, 0.3);
+  color: #A8B9FF;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.prompt-text {
+  font-size: 2rem;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.answer-form {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.answer-input {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  resize: vertical;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.answer-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: rgba(102, 126, 234, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.char-count {
+  text-align: right;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.waiting-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(76, 175, 80, 0.1);
+  border: 2px solid rgba(76, 175, 80, 0.3);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.check-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: checkPop 0.5s ease-out;
+}
+
+@keyframes checkPop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.waiting-message p {
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.waiting-text {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 1.1rem !important;
+  font-weight: 400 !important;
+}
+
+.answered-count {
+  color: #4CAF50 !important;
+  font-size: 1rem !important;
+  margin-top: 1rem !important;
+  font-weight: 500 !important;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 3rem;
+}
+
+@media (max-width: 768px) {
+  .answer-phase {
+    padding: 1rem;
+  }
+
+  .prompt-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .prompt-text {
+    font-size: 1.5rem;
+  }
+
+  .answer-form {
+    padding: 1.5rem;
+  }
+
+  .answer-input {
+    font-size: 1rem;
+    min-height: 100px;
+  }
+
+  .btn-submit {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
